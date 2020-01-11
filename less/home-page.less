@@ -1,4 +1,35 @@
+header {
+  @media @mobile {
+    .flex(column, center, center);
+  }
+  .flex(column, center, center);
+  .fun-bus {
+    width: 42%;
+    @media @mobile {
+      width: 80%;
+    }
+  }
+
+  div {
+    @media @mobile {
+      width: 80%;
+    }
+    width: 42%;
+    border-bottom: 2px dashed @silver;
+    padding-bottom: .5%;
+    padding-top: 1%;
+  }
+}
+
+
+
+
+
+
 .home {
+  @media @mobile {
+    .flex(column, center, center);
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,16 +37,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      .flex(column, center, center);
+      width: 80%;
+    }
+
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: auto;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        width: auto;
+      }
 
       img {
         border-radius: 10px;
@@ -26,6 +68,11 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      .flex(column-reverse, center, center);
+      width: 80%;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -41,6 +88,12 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 80%;
+      padding-bottom: 5%;
+      border-bottom: 2px dashed @navigation-border;
+      margin-bottom: 1%;
+    }
 
     img {
       border-radius: 10px;
@@ -48,14 +101,45 @@
   }
 
   .content-pick {
-    padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
+
+    @media @mobile{
+      .flex(column, center, center);
+      border-top: none;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile{
+        width: 70%;
+      }
     }
   }
 }// home
+
+.btn {
+  height: 20%;
+  .flex(row, space-between, center);
+  a {
+    text-decoration: none;
+    .button(white, @eastern-blue, 2rem);
+    text-align: center;
+    border: 1px solid @silver;
+    padding: 5%;
+    border-radius: 15px;
+    width: 80%;
+    @media @mobile {
+      width: 100%;
+      padding: 3%;
+    }
+    &:hover {
+      background-color: lightblue;
+      color: @eastern-blue;
+    }
+  }
+}
+
